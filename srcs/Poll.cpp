@@ -16,6 +16,15 @@ int Server::processConnection(int listen_sock)
             sqlServer.sin_port = htons(_sql_port);
             sqlServer.sin_addr.s_addr = htonl(2130706433);
             memset(sqlServer.sin_zero, '\0', sizeof(sqlServer.sin_zero));
+
+
+			socklen_t len = sizeof(client);
+			int new_sock = accept(listen_sock, (struct sockaddr *) &client, &len);
+			if (new_sock < 0) {
+				logStream << "accept fail" << std::endl;
+				logger.logMessage(logStream, ERROR);
+				continue;
+			}
             int new_sql_fd = socket(AF_INET, SOCK_STREAM, 0);
             if (new_sql_fd < 0) {
                 logStream << "failed to creat sql socket" << std::endl;
@@ -24,7 +33,7 @@ int Server::processConnection(int listen_sock)
             }
             if (connect(new_sql_fd, (struct sockaddr *)&sqlServer, sizeof(sqlServer)) == -1) {
                 close(new_sql_fd);
-                logStream << "failed to connect sql server" << std::endl;
+                logStream << "failed to connect to sql server" << std::endl;
                 logger.logMessage(logStream, ERROR);
                 return -1;
             }
@@ -33,13 +42,6 @@ int Server::processConnection(int listen_sock)
                 logger.logMessage(logStream, ERROR);
                 continue;
             }
-			socklen_t len = sizeof(client);
-			int new_sock = accept(listen_sock, (struct sockaddr *) &client, &len);
-			if (new_sock < 0) {
-				logStream << "accept fail" << std::endl;
-				logger.logMessage(logStream, ERROR);
-				continue;
-			}
 
 			int i = 0;
 			for (; i < MAX_USERS; i++) {
@@ -68,9 +70,12 @@ int Server::processConnection(int listen_sock)
 				logger.logMessage(logStream, ERROR);
 			} else if (s == 0) {
 				close(fd_list[i].fd);
+                close(fd_list[i + 1].fd);
                 logStream << "fd[" << fd_list[i].fd << "] disconnected" << std::endl;
+                logStream << "fd[" << fd_list[i + 1].fd << "] disconnected" << std::endl;
                 logger.logMessage(logStream, DEV);
 				fd_list[i].fd = -1;
+				fd_list[i + 1].fd = -1;
 			} else {
 				buf[s] = 0;
 			}

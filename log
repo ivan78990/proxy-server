@@ -44272,3 +44272,12 @@
 2022-11-30 20:10:08|INFO |Get a new SQL-server fd[4]
 2022-11-30 20:11:08|INFO |POLL returned 1
 2022-11-30 20:11:08|DEV  |Client fd[4] disconnected
+2022-11-30 20:15:51|INFO |Starting server on port 4444 
+2022-11-30 20:17:39|INFO |Starting server on port 4444 
+2022-11-30 20:17:47|ERROR|failed to connect sql server
+2022-11-30 20:18:46|INFO |Starting server on port 4444 
+2022-11-30 20:18:49|ERROR|failed to connect sql server
+2022-11-30 20:24:06|INFO |Starting server on port 4444 
+2022-11-30 20:24:09|ERROR|failed to connect sql server
+2022-11-30 20:24:40|INFO |Starting server on port 4444 
+2022-11-30 20:26:04|ERROR|failed to connect sql server

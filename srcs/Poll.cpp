@@ -16,6 +16,13 @@ int Server::processConnection(int listen_sock)
             sqlServer.sin_port = htons(_sql_port);
             sqlServer.sin_addr.s_addr = htonl(2130706433);
             memset(sqlServer.sin_zero, '\0', sizeof(sqlServer.sin_zero));
+			socklen_t len = sizeof(client);
+			int new_sock = accept(listen_sock, (struct sockaddr *) &client, &len);
+			if (new_sock < 0) {
+				logStream << "accept fail" << std::endl;
+				logger.logMessage(logStream, ERROR);
+				continue;
+			}
             int new_sql_fd = socket(AF_INET, SOCK_STREAM, 0);
             if (new_sql_fd < 0) {
                 logStream << "failed to creat sql socket" << std::endl;
@@ -33,13 +40,6 @@ int Server::processConnection(int listen_sock)
                 logger.logMessage(logStream, ERROR);
                 continue;
             }
-			socklen_t len = sizeof(client);
-			int new_sock = accept(listen_sock, (struct sockaddr *) &client, &len);
-			if (new_sock < 0) {
-				logStream << "accept fail" << std::endl;
-				logger.logMessage(logStream, ERROR);
-				continue;
-			}
 
 			int i = 0;
 			for (; i < MAX_USERS; i++) {

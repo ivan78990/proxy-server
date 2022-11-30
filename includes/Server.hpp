@@ -25,7 +25,7 @@ public:
 	Server(int port, int sql_port);
 	void 						createFdList(int);
 
-    void 						processConnection(int listen_sock);
+    int processConnection(int listen_sock);
 	int 						createListenSocket(int);
 	void						mainLoop(int);
 

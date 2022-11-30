@@ -81,7 +81,8 @@ void Server::mainLoop(int listen_sock)
 			else {
                 logStream << "POLL returned " << ret << std::endl;
                 logger.logMessage(logStream, INFO);
-				processConnection(listen_sock);
+				if (processConnection(listen_sock) < 0)
+                    return;
 			}
 		}
 }

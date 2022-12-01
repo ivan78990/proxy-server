@@ -1,9 +1,9 @@
 # Proxy-server
-A simple TCP proxy-server\n
+A simple TCP proxy-server
 
-Start PostgreSQL\n
-make\n
-./proxy listen_port SQL_port (example ./proxy 6667 5432)\n
-nc localhost 6667\n
+- Start PostgreSQL
+- Enter make in terminal in root folder
+- ./proxy listen_port SQL_port (example ./proxy 6667 5432)
+- nc localhost 6667
 
 

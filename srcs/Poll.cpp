@@ -16,8 +16,6 @@ int Server::processConnection(int listen_sock)
             sqlServer.sin_port = htons(_sql_port);
             sqlServer.sin_addr.s_addr = htonl(2130706433);
             memset(sqlServer.sin_zero, '\0', sizeof(sqlServer.sin_zero));
-
-
 			socklen_t len = sizeof(client);
 			int new_sock = accept(listen_sock, (struct sockaddr *) &client, &len);
 			if (new_sock < 0) {

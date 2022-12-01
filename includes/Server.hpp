@@ -38,11 +38,8 @@ private:
 	struct pollfd 				fd_list[1024];
 	int							_port;
     int                         _sql_port;
-	std::string					_serverName;
-
-	Logger						logger;
-
+    Logger						logger;
     void						StartLogMessage();
-
+    bool                        is_listen_sock();
 };
 #endif //MY_IRC_SERVER_HPP

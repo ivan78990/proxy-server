@@ -79,13 +79,19 @@ void Server::mainLoop(int listen_sock)
                 continue;
             }
 			else {
-                logStream << "POLL returned " << ret << std::endl;
-                logger.logMessage(logStream, INFO);
-				if (processConnection(listen_sock) < 0)
-                    return;
+                if (is_listen_sock())
+				    processConnection(listen_sock);
+                else
+                    ssize_t nbytes = recv_message(i, buf);
+                    process_message(i, buf, nbytes);
 			}
 		}
 }
+
+bool Server::is_listen_sock() {
+    return false;
+}
+
 
 Server::~Server() {
 }
@@ -98,3 +104,4 @@ Server &Server::operator=(const Server &other) {
 	this->_port = other._port;
 	return(*this);
 }
+

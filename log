@@ -44285,3 +44285,85 @@
 2022-12-01 13:44:23|INFO |POLL returned 1
 2022-12-01 13:44:23|DEV  |fd[4] disconnected
 2022-12-01 13:44:23|DEV  |fd[5] disconnected
+2022-12-01 14:03:41|INFO |Starting server on port 6667 
+2022-12-01 14:03:47|INFO |POLL returned 1
+2022-12-01 14:03:47|INFO |Get a new client fd[4]
+2022-12-01 14:03:47|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:03:49|INFO |POLL returned 1
+2022-12-01 14:03:49|DEV  |fd[4] disconnected
+2022-12-01 14:03:49|DEV  |fd[5] disconnected
+2022-12-01 14:03:51|INFO |POLL returned 1
+2022-12-01 14:03:51|INFO |Get a new client fd[4]
+2022-12-01 14:03:51|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:03:52|INFO |POLL returned 1
+2022-12-01 14:03:54|INFO |POLL returned 1
+2022-12-01 14:03:54|DEV  |fd[4] disconnected
+2022-12-01 14:03:54|DEV  |fd[5] disconnected
+2022-12-01 14:03:58|INFO |POLL returned 1
+2022-12-01 14:03:58|INFO |Get a new client fd[4]
+2022-12-01 14:03:58|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:04:01|INFO |POLL returned 1
+2022-12-01 14:04:01|INFO |Get a new client fd[6]
+2022-12-01 14:04:01|INFO |Get a new SQL-server fd[7]
+2022-12-01 14:04:04|INFO |POLL returned 1
+2022-12-01 14:04:06|INFO |POLL returned 1
+2022-12-01 14:04:08|INFO |POLL returned 1
+2022-12-01 14:04:08|INFO |POLL returned 1
+2022-12-01 14:04:08|INFO |POLL returned 1
+2022-12-01 14:04:09|INFO |POLL returned 1
+2022-12-01 14:04:09|INFO |POLL returned 1
+2022-12-01 14:04:09|INFO |POLL returned 1
+2022-12-01 14:04:09|INFO |POLL returned 1
+2022-12-01 14:04:10|INFO |POLL returned 1
+2022-12-01 14:04:10|INFO |POLL returned 1
+2022-12-01 14:04:10|INFO |POLL returned 1
+2022-12-01 14:04:10|INFO |POLL returned 1
+2022-12-01 14:04:10|INFO |POLL returned 1
+2022-12-01 14:04:11|INFO |POLL returned 1
+2022-12-01 14:04:11|INFO |POLL returned 1
+2022-12-01 14:04:12|INFO |POLL returned 1
+2022-12-01 14:04:12|INFO |POLL returned 1
+2022-12-01 14:04:12|INFO |POLL returned 1
+2022-12-01 14:04:14|INFO |POLL returned 1
+2022-12-01 14:04:15|INFO |POLL returned 1
+2022-12-01 14:04:20|INFO |POLL returned 1
+2022-12-01 14:04:20|INFO |Get a new client fd[8]
+2022-12-01 14:04:20|INFO |Get a new SQL-server fd[9]
+2022-12-01 14:04:23|INFO |POLL returned 1
+2022-12-01 14:04:23|DEV  |fd[8] disconnected
+2022-12-01 14:04:23|DEV  |fd[9] disconnected
+2022-12-01 14:04:25|INFO |POLL returned 1
+2022-12-01 14:04:25|DEV  |fd[4] disconnected
+2022-12-01 14:04:25|DEV  |fd[5] disconnected
+2022-12-01 14:04:27|INFO |POLL returned 1
+2022-12-01 14:04:27|DEV  |fd[6] disconnected
+2022-12-01 14:04:27|DEV  |fd[7] disconnected
+2022-12-01 14:11:53|INFO |Starting server on port 6667 
+2022-12-01 14:11:56|INFO |POLL returned 1
+2022-12-01 14:11:56|INFO |Get a new client fd[4]
+2022-12-01 14:11:56|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:11:57|INFO |POLL returned 1
+2022-12-01 14:11:57|DEV  |fd[4] disconnected
+2022-12-01 14:11:57|DEV  |fd[5] disconnected
+2022-12-01 14:11:58|INFO |POLL returned 1
+2022-12-01 14:11:58|INFO |Get a new client fd[4]
+2022-12-01 14:11:58|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:11:58|INFO |POLL returned 1
+2022-12-01 14:11:58|DEV  |fd[4] disconnected
+2022-12-01 14:11:58|DEV  |fd[5] disconnected
+2022-12-01 14:12:04|INFO |POLL returned 1
+2022-12-01 14:12:04|INFO |Get a new client fd[4]
+2022-12-01 14:12:04|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:12:08|INFO |POLL returned 1
+2022-12-01 14:12:08|DEV  |fd[4] disconnected
+2022-12-01 14:12:08|DEV  |fd[5] disconnected
+2022-12-01 14:32:09|INFO |Starting server on port 6667 
+2022-12-01 14:32:14|INFO |POLL returned 1
+2022-12-01 14:32:14|ERROR|failed to connect to sql server
+2022-12-01 14:32:32|INFO |Starting server on port 6667 
+2022-12-01 14:32:36|INFO |POLL returned 1
+2022-12-01 14:32:36|INFO |Get a new client fd[4]
+2022-12-01 14:32:36|INFO |Get a new SQL-server fd[5]
+2022-12-01 14:32:38|INFO |POLL returned 1
+2022-12-01 14:32:38|DEV  |fd[4] disconnected
+2022-12-01 14:32:38|DEV  |fd[5] disconnected

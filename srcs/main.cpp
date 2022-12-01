@@ -5,8 +5,9 @@
 
 void validateArguments(int ac, char **av) {
 	if (ac < 3) {
+		std::cout << "Too low _arguments!" << std::endl;
 		std::cout << "Usage: ./proxy listen<port> sql-server<port>" << std::endl;
-		std::cout << "too low _arguments!" << std::endl;
+		std::cout << "Example: ./proxy 6667 5432" << std::endl;
 		exit(-1);
 	}
 	if (ac > 3) {

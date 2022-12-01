@@ -44281,3 +44281,19 @@
 2022-11-30 20:24:09|ERROR|failed to connect sql server
 2022-11-30 20:24:40|INFO |Starting server on port 4444 
 2022-11-30 20:26:04|ERROR|failed to connect sql server
+2022-12-01 13:28:31|INFO |Starting server on port 6667 
+2022-12-01 13:28:41|ERROR|failed to connect sql server
+2022-12-01 13:29:17|INFO |Starting server on port 6667 
+2022-12-01 13:29:19|ERROR|failed to connect sql server
+2022-12-01 13:29:58|INFO |Starting server on port 6667 
+2022-12-01 13:30:00|DEV  |POLL
+2022-12-01 13:30:00|INFO |Get a new client fd[4]
+2022-12-01 13:30:00|INFO |Get a new SQL-server fd[5]
+2022-12-01 13:30:02|DEV  |POLL
+2022-12-01 13:30:02|DEV  |fd[4] disconnected
+2022-12-01 13:30:07|DEV  |POLL
+2022-12-01 13:30:07|INFO |Get a new client fd[4]
+2022-12-01 13:30:07|INFO |Get a new SQL-server fd[6]
+2022-12-01 13:30:09|DEV  |POLL
+2022-12-01 13:30:11|DEV  |POLL
+2022-12-01 13:30:11|DEV  |fd[4] disconnected

@@ -79,8 +79,10 @@ void Server::mainLoop(int listen_sock)
                 continue;
             }
 			else {
-                if (processConnection(listen_sock) < 0)
-                    return;
+                logStream << "POLL" << std::endl;
+                logger.logMessage(logStream, DEV);
+                processConnection(listen_sock);
+
 			}
 		}
 }
